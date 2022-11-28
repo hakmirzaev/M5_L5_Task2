@@ -28,6 +28,7 @@ struct LottieView: UIViewRepresentable {
 
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
+        animationView.loopMode = .repeat(Float(self.play))
 
         NSLayoutConstraint.activate([
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor),
